@@ -86,3 +86,15 @@ ipch/
 *.vsp
 *.vspx
 *.sap
+
+# VS Code
+.vscode/
+.vscode/*
+
+# Rider / IntelliJ
+.idea/
+.idea/*
+
+# Build outputs
+bin/
+obj/
