@@ -29,18 +29,6 @@
     <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="$gameversion$.*" />
   </DependedModuleMetadatas>
   <SubModules>
-    <SubModule>
-      <Name value="MCMv5" />
-      <DLLName value="MCMv5.dll" />
-      <SubModuleClassType value="MCM.MCMSubModule" />
-      <Tags />
-    </SubModule>
-    <SubModule>
-      <Name value="MCMv5 Basic Implementation" />
-      <DLLName value="MCMv5.dll" />
-      <SubModuleClassType value="MCM.Internal.MCMImplementationSubModule" />
-      <Tags />
-    </SubModule>
     <!-- Bannerlord Module Loader. Do not change the name! -->
     <SubModule>
       <Name value="Bannerlord Module Loader" />
