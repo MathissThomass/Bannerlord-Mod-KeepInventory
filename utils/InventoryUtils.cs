@@ -62,7 +62,11 @@ public static class InventoryUtils
         }
         else
         {
-            return hero.Clan.Settlements.FirstOrDefault(settlement => !settlement.IsUnderSiege);
+            return hero.Clan.Settlements
+                .FirstOrDefault(settlement =>
+                    settlement != home &&
+                    settlement.OwnerClan == Clan.PlayerClan &&
+                    settlement is { Stash: not null, IsUnderSiege: false, IsVillage: false });
         }
     }
 
@@ -79,7 +83,7 @@ public static class InventoryUtils
             string name = item.EquipmentElement.Item?.Name?.ToString() ?? "Item inconnu";
             int amount = item.Amount;
             InformationManager.DisplayMessage(
-                new InformationMessage($"[InventoryMod] {name} x{amount}"));
+                new InformationMessage($"[KeepInventory] {name} x{amount}"));
         }
     }
 
@@ -117,7 +121,7 @@ public static class InventoryUtils
         var item = eq.Item;
         return item == null || eq.IsQuestItem;
     }
-    
+
     /// <summary>
     /// Give an item to the player inventory
     /// </summary>
