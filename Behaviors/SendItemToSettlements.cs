@@ -88,7 +88,7 @@ public class SendItemToSettlements : CampaignBehaviorBase
             }
             else
             {
-                var homeSettlement = InventoryUtils.GetPlayerHomeSettlement();
+                var homeSettlement = InventoryUtils.GetPreferredStashSettlement();
                 if (homeSettlement == null)
                 {
                     InventoryTransferServices.RestoreLostInventory(InventoryBeforeBattle!, currentInventory);

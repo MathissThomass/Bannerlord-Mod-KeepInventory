@@ -1,3 +1,4 @@
+using System.Linq;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Extensions;
 using TaleWorlds.CampaignSystem.Party;
@@ -35,10 +36,10 @@ public static class InventoryUtils
     }
 
     /// <summary>
-    /// Get the player home settlements, or null if errors
+    /// Get the player home settlements, if the settlement is under siege, get the first settlement available
     /// </summary>
-    /// <returns>Home settlement</returns>
-    public static Settlement? GetPlayerHomeSettlement()
+    /// <returns>The preferred settlement to send the inventory</returns>
+    public static Settlement? GetPreferredStashSettlement()
     {
         var hero = Hero.MainHero;
         if (hero == null)
@@ -55,7 +56,14 @@ public static class InventoryUtils
             return null;
         }
 
-        return home;
+        if (!home.IsUnderSiege)
+        {
+            return home;
+        }
+        else
+        {
+            return hero.Clan.Settlements.FirstOrDefault(settlement => !settlement.IsUnderSiege);
+        }
     }
 
     /// <summary>
