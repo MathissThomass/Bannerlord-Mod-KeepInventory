@@ -16,13 +16,6 @@ public static class InventoryTransferServices
     public static void SendAllItem(ItemRoster inventory, Settlement home)
     {
         var stash = home.Stash;
-        if (stash == null)
-        {
-            InformationManager.DisplayMessage(
-                new InformationMessage("[KeepInventory] The settlement has no stash available.", Colors.Red)
-            );
-            return;
-        }
 
         foreach (var element in inventory)
         {
@@ -45,14 +38,6 @@ public static class InventoryTransferServices
     public static void SendOnlyLostInventory(ItemRoster inventoryBeforeBattle, ItemRoster currentInventory,
         Settlement home)
     {
-        if (home.Stash == null)
-        {
-            InformationManager.DisplayMessage(
-                new InformationMessage("[KeepInventory] The settlement has no stash available.", Colors.Red)
-            );
-            return;
-        }
-
         SendItemRosterDifference(inventoryBeforeBattle, currentInventory, home.Stash);
     }
 

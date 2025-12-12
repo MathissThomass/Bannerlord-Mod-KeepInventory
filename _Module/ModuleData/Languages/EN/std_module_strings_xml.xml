@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+    <tags>
+        <tag language="English"/>
+    </tags>
+    <strings>
+        <!-- Settings string-->
+        <string id="send_everything_option_title" text="Send everything to home settlement stash" />
+        <string id="send_everything_option_hint" text="Sends your entire pre-battle inventory to your home settlement. Items that wouldn't be lost will also be transferred. If you don't own a settlement, your items will stay in your inventory instead." />
+        <string id="keep_everything_inventory_option_title" text="Keep everything in player inventory" />
+        <string id="keep_everything_inventory_option_hint" text="Prevents the game from removing any items after defeat. You keep everything, regardless of what the game would normally take." />
+        <string id="send_lost_option_title" text="Send only lost items" />
+        <string id="send_lost_option_hint" text="Sends only the items the game removes after defeat to your home settlement." />
+        <string id="lose_everything_option_title" text="Lose everything on defeat" />
+        <string id="lose_everything_option_hint" text="Removes all non-quest items from your inventory after defeat. Nothing is kept or transferred." />
+    </strings>
+</base>
