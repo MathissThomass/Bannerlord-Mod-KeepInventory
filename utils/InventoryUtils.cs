@@ -19,9 +19,6 @@ public static class InventoryUtils
     {
         if (MobileParty.MainParty == null)
         {
-            InformationManager.DisplayMessage(
-                new InformationMessage("[KeepInventory] MainParty null, player uninitialized.", Colors.Red)
-            );
             return null;
         }
 
@@ -42,16 +39,10 @@ public static class InventoryUtils
     public static Settlement? GetPreferredStashSettlement()
     {
         var hero = Hero.MainHero;
-        if (hero == null)
-        {
-            InformationManager.DisplayMessage(
-                new InformationMessage("[KeepInventory] MainHero null.", Colors.Red));
-            return null;
-        }
 
         var home = hero.HomeSettlement;
 
-        if (home == null || home.OwnerClan != Clan.PlayerClan)
+        if (home == null || home.OwnerClan != Clan.PlayerClan || home.Stash == null)
         {
             return null;
         }

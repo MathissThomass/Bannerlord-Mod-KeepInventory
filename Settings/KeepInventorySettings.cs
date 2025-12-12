@@ -77,10 +77,10 @@ internal sealed class KeepInventorySettings : AttributeGlobalSettings<KeepInvent
 
     // === Options ===
 
-    [SettingPropertyBool("Send everything to home settlement stash",
+    [SettingPropertyBool("{=send_everything_option_title}Send everything to home settlement stash",
         Order = 0,
         RequireRestart = false,
-        HintText = "Sends your entire pre-battle inventory to your home settlement. Items that wouldn't be lost will also be transferred. If you don't own a settlement, your items will stay in your inventory instead.")]
+        HintText = "{=send_everything_option_hint}Sends your entire pre-battle inventory to your home settlement. Items that wouldn't be lost will also be transferred. If you don't own a settlement, your items will stay in your inventory instead.")]
     [SettingPropertyGroup("General")]
     public bool SendAllInventoryToHomeSettlement
     {
@@ -88,10 +88,10 @@ internal sealed class KeepInventorySettings : AttributeGlobalSettings<KeepInvent
         set => SetExclusiveMode(ref _sendAllInventoryToHomeSettlement, value, nameof(SendAllInventoryToHomeSettlement));
     }
 
-    [SettingPropertyBool("Keep everything in player inventory",
+    [SettingPropertyBool("{=keep_everything_inventory_option_title}Keep everything in player inventory",
         Order = 1,
         RequireRestart = false,
-        HintText = "Prevents the game from removing any items after defeat. You keep everything, regardless of what the game would normally take.")]
+        HintText = "{=keep_everything_inventory_option_hint}Prevents the game from removing any items after defeat. You keep everything, regardless of what the game would normally take.")]
     [SettingPropertyGroup("General")]
     public bool KeepItemsInInventory
     {
@@ -99,10 +99,10 @@ internal sealed class KeepInventorySettings : AttributeGlobalSettings<KeepInvent
         set => SetExclusiveMode(ref _keepItemsInInventory, value, nameof(KeepItemsInInventory));
     }
 
-    [SettingPropertyBool("Send only lost items",
+    [SettingPropertyBool("{=send_lost_option_title}Send only lost items",
         Order = 2,
         RequireRestart = false,
-        HintText = "Sends only the items the game removes after defeat to your home settlement.")]
+        HintText = "{=send_lost_option_hint}Sends only the items the game removes after defeat to your home settlement.")]
     [SettingPropertyGroup("General")]
     public bool SendOnlyLostItems
     {
@@ -110,10 +110,10 @@ internal sealed class KeepInventorySettings : AttributeGlobalSettings<KeepInvent
         set => SetExclusiveMode(ref _sendOnlyLostItems, value, nameof(SendOnlyLostItems));
     }
 
-    [SettingPropertyBool("Lose everything on defeat",
+    [SettingPropertyBool("{=lose_everything_option_title}Lose everything on defeat",
         Order = 3,
         RequireRestart = false,
-        HintText = "Removes all non-quest items from your inventory after defeat. Nothing is kept or transferred."
+        HintText = "{=lose_everything_option_hint}Removes all non-quest items from your inventory after defeat. Nothing is kept or transferred."
     )]
     [SettingPropertyGroup("General")]
     public bool LoseEverythingOnDefeat

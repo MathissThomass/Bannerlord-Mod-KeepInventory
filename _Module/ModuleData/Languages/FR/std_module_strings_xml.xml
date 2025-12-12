@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+    <tags>
+        <tag language="French"/>
+    </tags>
+    <strings>
+        <!-- Settings string-->
+        <string id="send_everything_option_title" text="Envoyer tout l'inventaire à la cachette de la colonie" />
+        <string id="send_everything_option_hint" text="Envoi tout l'inventaire du joueur à la colonie de domicile du joueur. Les articles qui ne devrais pas être perdu seront aussi transférer. Si le joueur ne possède pas de colonie, tout les articles resteront dans l'inventaire du joueur." />
+        <string id="keep_everything_inventory_option_title" text="Garder tout dans l'inventaire" />
+        <string id="keep_everything_inventory_option_hint" text="Empêche le jeux de retirer les articles de l'inventaire du joueur. Le joueur garde tout l'inventaire peu importe ce que le jeu aurait retiré par défaut." />
+        <string id="send_lost_option_title" text="Envoyer seulement les items perdus" />
+        <string id="send_lost_option_hint" text="Envoi uniquement les articles que le jeu retire après une défaite à la colonie de domicile." />
+        <string id="lose_everything_option_title" text="Perdre tout en cas de défaite" />
+        <string id="lose_everything_option_hint" text="Retire tous les articles non liés à une quête de l'inventaire du joueur après une défaite. Rien n'est gardé ni transféré." />
+    </strings>
+</base>
